@@ -13,7 +13,7 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    
+
     var locationManager: CLLocationManager?
     var currentLocation: CLLocation!
 
@@ -64,6 +64,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager?.stopUpdatingLocation()
         }
         
+    }
+
+    @IBAction func tapOnMap(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            let locationSelectedInView = sender.location(in: mapView)
+        }
     }
 }
 

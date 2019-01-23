@@ -6,6 +6,6 @@ target 'MapTeam' do
   use_frameworks!
 
   # Pods for MapTeam
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', '5.0.0.beta.1'
 
 end

@@ -23,9 +23,14 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8P-Bp-Cbg">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="d81-T4-4ha" appends="YES" id="bVd-yj-5wq"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="o8P-Bp-Cbg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="9ze-fV-OJy"/>
                             <constraint firstAttribute="trailing" secondItem="o8P-Bp-Cbg" secondAttribute="trailing" id="ENi-a0-LDL"/>
@@ -38,6 +43,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="d81-T4-4ha">
+                    <connections>
+                        <action selector="tapOnMap:" destination="BYZ-38-t0r" id="fDe-Q4-KE4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
